@@ -20,11 +20,11 @@ login = (key) => {
     elems.chatInput.focus()
 }
 
-elems.openaikey.onpaste = () => {
-    login(elems.openaikey.value)
-    openaikey.value = ""
-    chatInput.value = ""
-}
+// elems.openaikey.onpaste = () => {
+//     login(elems.openaikey.value)
+//     openaikey.value = ""
+//     chatInput.value = ""
+// }
 
 elems.openaikey.onkeyup = (e) => {
     if (e.keyCode === 13) {
