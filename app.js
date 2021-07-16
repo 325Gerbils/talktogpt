@@ -18,15 +18,10 @@ elems.openaikey.focus()
 
 login = (key) => {
     openaikey = key
+    console.log(openaikey)
     elems.loginScreen.style.display = "none"
     elems.chatInput.focus()
 }
-
-// elems.openaikey.onpaste = () => {
-//     login(elems.openaikey.value)
-//     openaikey.value = ""
-//     chatInput.value = ""
-// }
 
 elems.openaikey.onkeyup = (e) => {
     if (e.keyCode === 13) {
@@ -46,6 +41,7 @@ paintMessages = () => {
 
 sendUserMessage = (message) => {
     if (message === "") return
+    console.log(message)
     msgs.push({ isGPT: false, text: message })
     paintMessages()
     elems.chatInput.focus()
@@ -65,6 +61,7 @@ sendUserMessage = (message) => {
     })
         .then(r => r.json())
         .then(json => {
+            console.log(json)
             msgs.push({ isGPT: true, text: json.choices[0].text })
             paintMessages()
         })

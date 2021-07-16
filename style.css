@@ -103,7 +103,7 @@
 
 #chat-window p.you {
     background: #559;
-    margin-left: calc(30% - 15px);
+    margin-left: calc(30% - 10px);
     border-radius: 5px 5px 0 5px;
 }
 
