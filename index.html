@@ -1,0 +1,30 @@
+<!-- Boilerplate empty HTML -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Talk To GPT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="login-screen">
+        <h3>Log In with<br>your OpenAI key</h3>
+        <input type="text" id="openai-key" placeholder="Enter your OpenAI key here">
+    </div>
+    <div id="chat-screen">
+        <div class="top-bar">
+            <h4>Talk to GPT-3 <select><option value="davinci" selected>DaVinci</option></select></h4>
+        </div>
+        <div id="chat-window">
+        </div>
+        <div class="bottom-bar">
+            <input type="text" id="chat-input" placeholder="Type a message here">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
