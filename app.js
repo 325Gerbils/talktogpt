@@ -52,7 +52,7 @@ sendUserMessage = (message) => {
         headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${openaikey}`,
-            "Access-Control-Allow-Origin": "https://325gerbils.github.io/talktogpt/",
+            "Access-Control-Allow-Origin": "*",
         },
         body: JSON.stringify({
             "prompt": prompt,
@@ -83,3 +83,4 @@ elems.sendButton.onclick = (e) => {
 }
 
 msgs.push({ isGPT: true, text: "Hi, I'm GPT-3. What would you like to chat about today?" })
+paintMessages()
