@@ -18,7 +18,6 @@ elems.openaikey.focus()
 
 login = (key) => {
     openaikey = key
-    console.log(openaikey)
     elems.loginScreen.style.display = "none"
     elems.chatInput.focus()
 }
@@ -57,7 +56,7 @@ sendUserMessage = (message) => {
         },
         body: JSON.stringify({
             "prompt": prompt,
-            "max_tokens": 5,
+            "max_tokens": 10,
         }),
     })
         .then(r => r.json())
@@ -82,3 +81,5 @@ elems.sendButton.onclick = (e) => {
     sendUserMessage(elems.chatInput.value)
     elems.chatInput.value = ""
 }
+
+msgs.push({ isGPT: true, text: "Hi, I'm GPT-3. What would you like to chat about today?" })
