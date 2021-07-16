@@ -53,6 +53,7 @@ sendUserMessage = (message) => {
         headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${openaikey}`,
+            "Access-Control-Allow-Origin": "https://325gerbils.github.io/talktogpt/",
         },
         body: JSON.stringify({
             "prompt": prompt,
