@@ -22,6 +22,8 @@ login = (key) => {
 
 elems.openaikey.onpaste = () => {
     login(elems.openaikey.value)
+    openaikey.value = ""
+    chatInput.value = ""
 }
 
 elems.openaikey.onkeyup = (e) => {
