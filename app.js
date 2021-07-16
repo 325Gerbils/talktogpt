@@ -42,7 +42,7 @@ paintMessages = () => {
 
 sendUserMessage = (message) => {
     if (message === "") return
-    msgs.push({ isGPT: Math.random() > 0.5, text: message })
+    msgs.push({ isGPT: false, text: message })
     paintMessages()
     elems.chatInput.focus()
     prompt = msgs.slice(-50).reduce(function (prompt, msg) {
